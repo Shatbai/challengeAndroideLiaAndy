@@ -8,6 +8,8 @@ import android.view.ViewGroup
 import androidx.navigation.fragment.findNavController
 import edu.tec.challenge.data.Tarea
 import edu.tec.challenge.databinding.FragmentCapturaBinding
+import java.text.SimpleDateFormat
+import java.util.*
 
 
 class CapturaFragment : Fragment() {
@@ -34,7 +36,9 @@ class CapturaFragment : Fragment() {
             val nombreTarea = binding.nombreTareaText.text.toString()
             val descripcionTarea = binding.descripcionText.text.toString()
             val prioridadTarea = binding.prioridadText.text.toString()
-            val tareas = Tarea(nombreTarea,descripcionTarea,prioridadTarea)
+            val timeStamp: String = SimpleDateFormat("yyyyMMdd_HHmmss").format(Date())
+            val tareas = Tarea(nombreTarea,descripcionTarea,prioridadTarea,timeStamp)
+
 
             val action = CapturaFragmentDirections.actionCapturaFragmentToListaFragment2(tareas)
 

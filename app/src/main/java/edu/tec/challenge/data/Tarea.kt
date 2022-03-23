@@ -5,7 +5,7 @@ import android.os.Parcelable
 import  kotlinx.parcelize.Parcelize
 
 @Parcelize
-data class Tarea(val nombreTarea: String, val descripcion: String, val prioridad: String) : Parcelable  {
+data class Tarea(val nombreTarea: String, val descripcion: String, val prioridad: String,val Timestamp: String) : Parcelable  {
 
 
 }
