@@ -15,7 +15,7 @@ import edu.tec.challenge.data.TareaProvider
 import edu.tec.challenge.databinding.FragmentListaBinding
 
 class ListaFragment : Fragment() {
-    private lateinit var binding: FragmentListaBinding
+    private lateinit var binding:FragmentListaBinding
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         val recycler : RecyclerView = binding.recyclerview
